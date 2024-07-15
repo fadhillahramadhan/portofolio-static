@@ -4,11 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/app.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/logo.png" />
+
     <meta name="description" content="I'm a web developer from Bandung, Jawa Barat, Indonesia. Specialising in PHP, JavaScript, Codeigniter, Laravel and Vue.js.">
     <meta name="keywords" content="Portofolio, Developer, JavaScript Developer, Codeigniter Developer, Vue.js Developer, Create Website, Bikin Website, Website, Backend Developer,fadhillah ramadhan, Fadhillah Ramadhan">
     <meta name="author" content="Fadhillah Ramadhan">
@@ -17,6 +13,17 @@
     <meta name="revisit-after" content="7 days">
     <title>Fadhillah Ramadhan | Backend Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>   
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link href="css/app.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="manifest" href="manifest.json">
+
 </head>
 
 <style>
@@ -222,11 +229,19 @@
     </footer>
 </body>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
-<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
 <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('js/service-worker.js')
+            .then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, err => {
+            console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+    
     ScrollReveal().reveal('.scrollreveal', {
         delay: 200
     });
