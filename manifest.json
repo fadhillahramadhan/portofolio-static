@@ -16,8 +16,8 @@
         }
     ],
     "orientation": "any",
-    "display": "standalone",
     "description": "I'm a web developer from Bandung, Jawa Barat, Indonesia. Specialising in PHP, JavaScript, Codeigniter, Laravel and Vue.js.",
+    "display": "standalone",
     "dir": "auto",
     "lang": "en-US",
     "name": "Fadhil Portofolio",
