@@ -3,7 +3,6 @@ const urlsToCache = [
 	'/portofolio-static',
 	'/portofolio-static/css/app.css',
 	'/portofolio-static/images/logo.png',
-	'https://threejs.org/examples/js/libs/stats.min.js',
 	'https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js',
 	'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js',
 	// Add more files you want to cache
